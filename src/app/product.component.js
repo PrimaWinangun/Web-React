@@ -12,10 +12,6 @@ import React, {Component} from 'react';
         }.bind(this));
 	};
 	
-	function componentWillUnmount(){
-		this.serverRequest.abort();
-	};
-	
 class ReadProductComponent extends Component{
 	render(){
 		var filteredProducts = this.state.products;

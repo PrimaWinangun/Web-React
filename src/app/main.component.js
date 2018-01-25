@@ -18,25 +18,25 @@ class MainApp extends Component {
 	
 	render() {
 		return(
-		<Routes/>
-		//var modeComponent = <ReadProductComponent changeAppMode={this.changeAppMode} />;
-		// switch(this.props.currentMode){
-			// case 'read':
-				// return {modeComponent};
-			// case 'readOne':
-				// return <ReadProductComponent productId={this.props.productId} changeAppMode={this.changeAppMode}/>;
-			 // case 'create':
-				// return <CreateProductComponent changeAppMode={this.changeAppMode}/>;
-			// case 'update':
-				// modeComponent = <UpdateProductComponent productId={this.state.productId} changeAppMode={this.changeAppMode}/>;
-				// break;
-			// case 'delete':
-				// modeComponent = <DeleteProductComponent productId={this.state.productId} changeAppMode={this.changeAppMode}/>;
-				// break;
-			// default:
-				// break;
-		// }
-		// return modeComponent;
+		//<Routes/>
+		var modeComponent = <ReadProductComponent changeAppMode={this.changeAppMode} />;
+		switch(this.props.currentMode){
+			case 'read':
+				return {modeComponent};
+			case 'readOne':
+				return <ReadProductComponent productId={this.props.productId} changeAppMode={this.changeAppMode}/>;
+			 case 'create':
+				return <CreateProductComponent changeAppMode={this.changeAppMode}/>;
+			case 'update':
+				modeComponent = <UpdateProductComponent productId={this.state.productId} changeAppMode={this.changeAppMode}/>;
+				break;
+			case 'delete':
+				modeComponent = <DeleteProductComponent productId={this.state.productId} changeAppMode={this.changeAppMode}/>;
+				break;
+			default:
+				break;
+		}
+		return modeComponent;
 		);
 	}
 }
