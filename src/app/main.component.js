@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import Routes from '../routes';
 
-// import ReadProductComponent from './src/app/product.component.js';
+import ReadProductComponent from './product/product.component.js';
 
 class MainApp extends Component {
 	constructor(){
 		super();
 		this.state={products:[], currentMode:'read'};
+		this.changeAppMode = this.changeAppMode.bind(this);
 	}
 	
 	changeAppMode = (newMode, productId) => {
@@ -19,9 +20,9 @@ class MainApp extends Component {
 	}
 	
 	render() {
+		var modeComponent = <ReadProductComponent changeAppMode={this.changeAppMode.bind(this)} />;
 		return(
 		<Routes/>
-		// var modeComponent = <ReadProductComponent changeAppMode={this.changeAppMode} />;
 		// switch(this.props.currentMode){
 			// case 'read':
 				// return {modeComponent};

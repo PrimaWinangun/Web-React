@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 class ProductRow extends Component{
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state = {
 			selectedProduct: ''
 		}
@@ -20,11 +20,11 @@ class ProductRow extends Component{
                     className='btn btn-info m-r-1em'> Read One
                 </a>
                 <a href='#'
-                    onClick={() => this.props.changeAppMode('update', this.props.product.id)}
+                    onClick={() => this.changeAppMode('update', this.props.product.id)}
                     className='btn btn-primary m-r-1em'> Edit
                 </a>
                 <a
-                    onClick={() => this.props.changeAppMode('delete', this.props.product.id)}
+                    onClick={() => this.changeAppMode('delete', this.props.product.id)}
                     className='btn btn-danger'> Delete
                 </a>
             </td>
