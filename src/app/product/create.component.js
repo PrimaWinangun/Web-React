@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router'
 
 class CreateProductComponent extends Component{
 	constructor(){
@@ -8,7 +9,7 @@ class CreateProductComponent extends Component{
 			selectedCategoryId: -1,
 			name: '',
 			description: '',
-			successCreation: null
+			successCreation: null,
 		};
 	}
 	
@@ -54,16 +55,16 @@ class CreateProductComponent extends Component{
 		fetch(url,{
 			method: "POST",
 			contentType: 'application/json',
-			data : JSON.stringify(form_data),
+			body : JSON.stringify(form_data),
 		}).then(function(response) { 
 			return response.json();
-		}).then((response) => {
-			this.setState({successCreation: response['message']});
+		}).then((data) => {
+			this.setState({successCreation: data['message']});
 			this.setState({name: ""});
 			this.setState({description: ""});
 			this.setState({price: ""});
 			this.setState({selectedCategoryId: -1});
-		}).then(response => console.log(response));
+		}).then(data => console.log(data));
 	}
 	
 	render(){
@@ -95,7 +96,6 @@ class CreateProductComponent extends Component{
 				<a href='/read'
 					className='btn btn-primary margin-bottom-1em'> Read Products
 				</a>
-		 
 		 
 				<form onSubmit={this.onSave}>
 					<table className='table table-bordered table-hover'>
@@ -156,7 +156,7 @@ class CreateProductComponent extends Component{
 							<td>
 								<button
 								className='btn btn-primary'
-								onClick={this.onSave}>Save</button>
+								>Save</button>
 							</td>
 						</tr>
 						</tbody>

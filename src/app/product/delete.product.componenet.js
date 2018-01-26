@@ -1,11 +1,11 @@
-import react, {Component} from 'react'
+import React, {Component} from 'react'
 
 class DeleteProductComponent extends Component{
 	onDelete(e){
 		var productId = this.props.productId;
 		
 		var url = 'http://localhost/api/product/delete.php';
-		console.log(form_data);
+		console.log(productId);
 		fetch(url,{
 			method: "POST",
 			contentType: 'application/json',
