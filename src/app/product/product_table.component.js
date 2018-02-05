@@ -8,10 +8,9 @@ class ProductsTable extends Component{
             return (
                 <ProductRow
                     key={i}
-                    product={product}
-                    changeAppMode={this.props.changeAppMode}/>
+                    product={product}/>
             );
-        }.bind(this));
+        });
  
         return(
             !rows.length

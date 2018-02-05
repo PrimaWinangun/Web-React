@@ -4,8 +4,7 @@ var filteredProducts = this.props.products;
 		
 		return (
 			<div className='overflow-hidden'>
-				<TopActionsComponent changeAppMode={this.props.changeAppMode} />
-                <ProductsTable products={filteredProducts}
-					changeAppMode={this.props.changeAppMode} />
+				<TopActionsComponent/>
+                <ProductsTable products={filteredProducts}/>
             </div>
 		);

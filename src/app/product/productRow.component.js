@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { withAlert } from 'react-alert'
 
 class ProductRow extends Component{
 	constructor(){
@@ -26,9 +25,8 @@ class ProductRow extends Component{
                 <a href={editProduct}
                     className='btn btn-primary m-r-1em'> Edit
                 </a>
-                <a href='#'
-					onClick={() =>this.props.alert.show('Anda Yakin??')}
-                    className='btn btn-danger'> Delete
+                <a href={deleteProduct}
+                    className='btn btn-primary m-r-1em'> Edit
                 </a>
             </td>
         </tr>

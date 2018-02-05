@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router'
 
 class CreateProductComponent extends Component{
 	constructor(){
@@ -77,7 +76,7 @@ class CreateProductComponent extends Component{
 			<div>
 				{
 		 
-					this.state.successCreation == "Product was created." ?
+					this.state.successCreation === "Product was created." ?
 						<div className='alert alert-success'>
 							Product was saved.
 						</div>
@@ -86,7 +85,7 @@ class CreateProductComponent extends Component{
 		 
 				{
 		 
-					this.state.successCreation == "Unable to create product." ?
+					this.state.successCreation === "Unable to create product." ?
 						<div className='alert alert-danger'>
 							Unable to save product. Please try again.
 						</div>

@@ -26,11 +26,11 @@ class ReadProductComponent extends Component{
 		
 		return(
 			<div className='overflow-hidden'>
-                <TopActionsComponent changeAppMode={this.props.changeAppMode} />
+                <TopActionsComponent  />
  
                 <ProductsTable
                     products={filteredProducts}
-                    changeAppMode={this.props.changeAppMode} />
+                    />
             </div>
 		)
 	}
