@@ -26,7 +26,7 @@ class ProductRow extends Component{
                     className='btn btn-primary m-r-1em'> Edit
                 </a>
                 <a href={deleteProduct}
-                    className='btn btn-primary m-r-1em'> Edit
+                    className='btn btn-warning m-r-1em'> Delete
                 </a>
             </td>
         </tr>

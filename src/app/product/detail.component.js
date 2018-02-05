@@ -34,6 +34,10 @@ class ReadDetail extends Component{
 	
 	render(){
 		return(
+		<div>
+			<a href='/read'
+					className='btn btn-primary margin-bottom-1em'> Product List	
+				</a>
 			<table className='table table-bordered table-hover'>
                 <tbody>
                     <tr>
@@ -58,6 +62,7 @@ class ReadDetail extends Component{
  
                 </tbody>
             </table>
+		</div>
 		);
 	}
 	

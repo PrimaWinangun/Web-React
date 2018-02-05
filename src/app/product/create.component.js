@@ -66,14 +66,26 @@ class CreateProductComponent extends Component{
 		}).then(data => console.log(data));
 	}
 	
+	renderTopAction() {
+		return(
+			<div>
+				<a href='/read'
+					className='btn btn-primary margin-bottom-1em'> Product List	
+				</a>
+			</div>
+		);
+	}
+	
 	render(){
 		var categoriesOptions = this.state.categories.map(function(category){
 			return (
 				<option key={category.id} value={category.id}>{category.name}</option>
 			);
 		});
+		let spacing: 10;
 		return (
 			<div>
+			
 				{
 		 
 					this.state.successCreation === "Product was created." ?
@@ -92,7 +104,7 @@ class CreateProductComponent extends Component{
 					: null
 				}
 		 
-				<a href='/read'
+				<a href='/read' style={{marginLeft: spacing + 'px'}}
 					className='btn btn-primary margin-bottom-1em'> Read Products
 				</a>
 		 
