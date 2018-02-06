@@ -34,11 +34,8 @@ class ProductRow extends Component{
 		let heightPx = height + 'px';
 		let heightOffset = height / 2;
 		let offsetPx = heightOffset + 'px';
-		const style = {
-		  
-		};
+		
 		var selectedProduct = '/product_detail/'+this.props.product.id;
-		var deleteProduct = '/product_delete/'+this.props.product.id;
 		var editProduct = '/product_update/'+this.props.product.id;
 		return (
         <tr>
@@ -82,7 +79,7 @@ class ProductRow extends Component{
 					  }
 					}}
 				>
-				  <p>Anda Yakin ingin menghapus item '{this.props.product.name}'</p>
+				  <p>Anda Yakin ingin menghapus item <b>{this.props.product.name}</b></p>
 				  <button onClick={this.deleteProduct(this.props.product.id)} className='btn btn-warning'>Yakin</button>
 				  <button onClick={this.handleCloseModal} className='btn btn-warning m-r-1em'>Batal</button>
 				</ReactModal>
