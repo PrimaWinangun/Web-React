@@ -21,9 +21,6 @@ class ReadDetail extends Component{
 			return response.json();
 		})
 		.then((json) => {
-			this.setState({
-				products: json.records
-			})
 			this.setState({category_name: json.records.category_name});
             this.setState({id: json.records.id});
             this.setState({name: json.records.name});
